@@ -1,9 +1,11 @@
 # Чтобы произвести взаимоимпорты
-from	aiogram import Bot
-from	aiogram.dispatcher import Dispatcher
+from dotenv import load_dotenv
+from aiogram import Bot
+from aiogram.dispatcher import Dispatcher
 import os
 
-#Здесь создается экземпляр юота
+load_dotenv()
+#Здесь создается экземпляр бота
 bot = Bot(token=os.getenv('TOKEN'))
 
 dp = Dispatcher(bot)
